@@ -68,7 +68,7 @@ namespace BachecaTodeschini
             }
         }
 
-        //RICERCA
+        //RICERCA E INSERIMENTO DATI NELLE TEXTBOX
         private void searchbutton_Click(object sender, EventArgs e)
         {
             string[] stringa = new string[4];
@@ -112,6 +112,7 @@ namespace BachecaTodeschini
             Aggiorna();
         }
 
+        //ORDINAMENTO PER PREZZO
         private void orderbutton_Click(object sender, EventArgs e)
         {
             b1.Ordinamento();
@@ -119,6 +120,7 @@ namespace BachecaTodeschini
             Aggiorna();
         }
 
+        //CALCOLO PREZZO TOTALE
         private void pricebutton_Click(object sender, EventArgs e)
         {
             price.Text = null;

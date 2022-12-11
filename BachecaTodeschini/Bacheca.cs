@@ -37,7 +37,8 @@ namespace BachecaTodeschini
             Svuota();
         }
 
-        private int getNumAnnunci() //numero di annunci all'interno della bacheca
+        //NUMERO DI ANNUNCI PRESENTI IN BACHECA
+        private int getNumAnnunci()
         {
             int i = 0;
             while (i < _annunci.Length && _annunci[i] != null)
@@ -51,8 +52,8 @@ namespace BachecaTodeschini
                 throw new Exception("La bacheca é piena");
         }
 
-
-        public void Aggiungi(annuncio a) //aggiungi annuncio
+        //AGGIUNTA ANNUNCIO
+        public void Aggiungi(annuncio a) 
         {
             if (a != null)
                 _annunci[getNumAnnunci()] = a;
@@ -60,7 +61,8 @@ namespace BachecaTodeschini
                 throw new Exception("Inserire un annuncio valido");
         }
 
-        public void Svuota() //svuota bacheca
+        //SVUOTA BACHECA
+        public void Svuota() 
         {
             for(int i = 0; i < massimo; i++)
                 _annunci[i] = null;
@@ -71,7 +73,8 @@ namespace BachecaTodeschini
             return _annunci[i];
         }
 
-        public int Cerca(annuncio a) //ricerca annuncio
+        //RICERCA DI UN ANNUNCIO
+        public int Cerca(annuncio a) 
         {
             int pos = -1;
             for (int i = 0; i < massimo; i++)
@@ -164,7 +167,7 @@ namespace BachecaTodeschini
         {
             float tot = 0;
 
-            for(int i = 0; i < _annunci.Length; i++)
+            for(int i = 0; i < _annunci.Length; i++) 
             {   
                 if( _annunci[i] != null)
                     tot = tot + _annunci[i].Prezzo;
