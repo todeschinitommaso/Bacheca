@@ -190,6 +190,7 @@
             this.pricebutton.TabIndex = 10;
             this.pricebutton.Text = "PREZZO TOT";
             this.pricebutton.UseVisualStyleBackColor = true;
+            this.pricebutton.Click += new System.EventHandler(this.pricebutton_Click);
             // 
             // label4
             // 
@@ -205,7 +206,7 @@
             // 
             this.price.AutoSize = true;
             this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.Location = new System.Drawing.Point(724, 423);
+            this.price.Location = new System.Drawing.Point(666, 423);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(47, 16);
             this.price.TabIndex = 12;
@@ -220,6 +221,7 @@
             this.orderbutton.TabIndex = 13;
             this.orderbutton.Text = "ORDINA PREZZO";
             this.orderbutton.UseVisualStyleBackColor = true;
+            this.orderbutton.Click += new System.EventHandler(this.orderbutton_Click);
             // 
             // label5
             // 

@@ -37,13 +37,15 @@ namespace BachecaTodeschini
                 counter++; //aumento counter per generare id
 
                 Aggiorna();
-
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
+            namebox.Text = null;
+            descbox.Text = null;
+            pricebox.Text = null;
         }
 
         //AGGIORNA BACHECA CON ANCHE GLI ANNUNCI NUOVI
@@ -110,5 +112,18 @@ namespace BachecaTodeschini
             Aggiorna();
         }
 
+        private void orderbutton_Click(object sender, EventArgs e)
+        {
+            b1.Ordinamento();
+
+            Aggiorna();
+        }
+
+        private void pricebutton_Click(object sender, EventArgs e)
+        {
+            price.Text = null;
+
+            price.Text = b1.PrezzoTot().ToString();
+        }
     }
 }

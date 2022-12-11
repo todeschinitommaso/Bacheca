@@ -135,5 +135,42 @@ namespace BachecaTodeschini
                 }
             }
         }
+
+        //BUBBLE SORT
+        public void Ordinamento()
+        {
+            int n = getNumAnnunci();
+            annuncio temp;
+
+            for (int j = 0; j <= n - 1; j++)
+            {
+                for (int i = 0; i <= n - 1; i++)
+                {
+                    if (_annunci[i + 1] != null)
+                    {
+                        if (_annunci[i].Prezzo > _annunci[i + 1].Prezzo)
+                        {
+                            temp = _annunci[i + 1];
+                            _annunci[i + 1] = _annunci[i];
+                            _annunci[i] = temp;
+                        }
+                    }
+                }
+            }
+        }
+
+        //SOMMA PREZZO
+        public float PrezzoTot()
+        {
+            float tot = 0;
+
+            for(int i = 0; i < _annunci.Length; i++)
+            {   
+                if( _annunci[i] != null)
+                    tot = tot + _annunci[i].Prezzo;
+            }
+
+            return tot;
+        }
     }
 }
